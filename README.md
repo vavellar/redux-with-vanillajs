@@ -7,5 +7,8 @@ O próprio site do Redux o define como um container de estado previsível. Ele s
 - O estado é somente leitura: a única maneira de mudar o estado é emitindo uma action, um objeto que descreve o que aconteceu.
 - Mudanças são realizadas através de funções puras: essas funções puras são chamadas reducers. A partir de actions os reducers especificam como a árvore de estado deve ser transformada.
 
-Uma função pura (pure function) é aquela que ao receber os mesmos argumentos retornará sempre o mesmo valor. Esse termo faz parte do jargão da programação funcional, inclusive funções desse tipo são fáceis de testar.
+- É papel do reducer, e não da action, realizar a atualização do estado na store
 
+- O estado da aplicação deve ser imutável, isto é, não deve mudar.  Ou seja, significa que para modificarmos o estado da aplicação precisaremos criar um novo object state com base no state anterior.
+
+- A Action descreve o fato de que algo aconteceu, mas não define como o estado da aplicação deve ser alterado. A mudança do estado é feita sincronamente através de reducers.
